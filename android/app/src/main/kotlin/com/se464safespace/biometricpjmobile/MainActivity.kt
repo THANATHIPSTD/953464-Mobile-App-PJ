@@ -1,4 +1,4 @@
-package com.example.biometricpjmobile
+package com.se464safespace.biometricpjmobile
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 
