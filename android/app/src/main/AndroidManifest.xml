@@ -5,7 +5,7 @@
     <!-- Add naja -->
 
     <application
-        android:label="biometricpjmobile"
+        android:label="Safe Space"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
