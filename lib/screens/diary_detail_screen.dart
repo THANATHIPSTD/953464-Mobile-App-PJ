@@ -27,7 +27,6 @@ class DiaryDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Header card
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(24),
@@ -44,6 +43,24 @@ class DiaryDetailScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
+                  // Lock badge if secret
+                  if (entry.isLocked)
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      margin: const EdgeInsets.only(bottom: 12),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.15),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(Icons.lock, size: 14, color: Colors.white70),
+                          SizedBox(width: 4),
+                          Text('Super Secret', style: TextStyle(fontSize: 12, color: Colors.white70, fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                    ),
                   Text(entry.feeling, style: const TextStyle(fontSize: 50)),
                   const SizedBox(height: 14),
                   Text(entry.title,
@@ -56,8 +73,6 @@ class DiaryDetailScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-
-            // Content
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),

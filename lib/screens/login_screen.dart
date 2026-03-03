@@ -33,9 +33,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // กำหนดตัวแปรสีให้ตรงกับโลโก้
-    const Color creamBgColor = Color(0xFFF6F3EB); // สีครีมจากพื้นหลังโลโก้
-    const Color indigoColor = Color(0xFF3B4653); // สีคราม/กรมท่าจากปกไดอารี่
+    const Color creamBgColor = Color(0xFFF6F3EB);
+    const Color indigoColor = Color(0xFF3B4653); 
     
     return Scaffold(
       backgroundColor: creamBgColor, 

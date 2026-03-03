@@ -15,9 +15,16 @@ List<DiaryEntry> generateMockData() {
       date: DateTime(2026, 2, 2, 8, 0),
     ),
     DiaryEntry(
+      title: 'Secret Crush Confession',
+      feeling: '😍',
+      isLocked: true,
+      description: 'I think I am starting to like someone at work. They smiled at me today and my heart skipped a beat. I cannot tell anyone about this yet...',
+      date: DateTime(2026, 2, 3, 22, 0),
+    ),
+    DiaryEntry(
       title: 'Coffee Date with Best Friend',
       feeling: '😊',
-      description: 'Met up with Ploy at our favorite café. We talked for hours about life, dreams, and everything in between. Feeling so grateful for genuine friendships.',
+      description: 'Met up with Ploy at our favorite cafe. We talked for hours about life, dreams, and everything in between. Feeling so grateful for genuine friendships.',
       date: DateTime(2026, 2, 3, 14, 0),
     ),
     DiaryEntry(
@@ -25,6 +32,13 @@ List<DiaryEntry> generateMockData() {
       feeling: '😢',
       description: 'The project deadline got moved up by a week. Stayed late trying to finish everything. Feeling overwhelmed but I know I can get through this.',
       date: DateTime(2026, 2, 4, 21, 0),
+    ),
+    DiaryEntry(
+      title: 'The Thing I Cannot Say Out Loud',
+      feeling: '🥺',
+      isLocked: true,
+      description: 'I have been hiding how stressed I really am. Everyone thinks I am fine but inside I feel like I am falling apart. I just need someone to ask if I am okay.',
+      date: DateTime(2026, 2, 5, 23, 0),
     ),
     DiaryEntry(
       title: 'Sunset at the Park',
@@ -51,6 +65,13 @@ List<DiaryEntry> generateMockData() {
       date: DateTime(2026, 2, 9, 20, 30),
     ),
     DiaryEntry(
+      title: 'My Biggest Fear',
+      feeling: '😢',
+      isLocked: true,
+      description: 'I am scared that I will never be good enough. No matter how hard I try, there is always this voice telling me I am not enough. Writing it down helps a little.',
+      date: DateTime(2026, 2, 10, 23, 30),
+    ),
+    DiaryEntry(
       title: 'New Playlist',
       feeling: '😊',
       description: 'Spent the whole evening curating a new playlist. Music really has a way of capturing emotions that words cannot express.',
@@ -75,9 +96,10 @@ List<DiaryEntry> generateMockData() {
       date: DateTime(2026, 2, 13, 23, 30),
     ),
     DiaryEntry(
-      title: 'Valentine Self-Love Day',
+      title: 'Valentine Secret Letter',
       feeling: '😍',
-      description: 'Treated myself to flowers, chocolate, and a spa session. You do not need anyone else to celebrate love. Self-love is the best love!',
+      isLocked: true,
+      description: 'I wrote a love letter today but I will never send it. Some feelings are better kept as secrets. Maybe one day I will be brave enough.',
       date: DateTime(2026, 2, 14, 10, 0),
     ),
     DiaryEntry(
@@ -105,9 +127,10 @@ List<DiaryEntry> generateMockData() {
       date: DateTime(2026, 2, 17, 15, 0),
     ),
     DiaryEntry(
-      title: 'Heartbreak',
+      title: 'The Goodbye I Never Said',
       feeling: '💔',
-      description: 'Sometimes things do not work out the way you hope. Had a difficult conversation today. It hurts now, but I know time will heal.',
+      isLocked: true,
+      description: 'I still think about how things ended. I never got to say a proper goodbye. Sometimes I wonder if they think about me too. This stays between me and this diary.',
       date: DateTime(2026, 2, 18, 22, 0),
     ),
     DiaryEntry(
@@ -129,9 +152,10 @@ List<DiaryEntry> generateMockData() {
       date: DateTime(2026, 2, 21, 19, 30),
     ),
     DiaryEntry(
-      title: 'Deep Conversation',
-      feeling: '🤔',
-      description: 'Had a long talk with a mentor about career direction. Lots to think about. Sometimes the right question is more valuable than any answer.',
+      title: 'Salary Secret',
+      feeling: '😎',
+      isLocked: true,
+      description: 'Got a raise today but my manager told me not to tell anyone. I am so happy but I literally cannot share it with a single soul. So here it is, diary.',
       date: DateTime(2026, 2, 22, 17, 0),
     ),
     DiaryEntry(
@@ -153,6 +177,13 @@ List<DiaryEntry> generateMockData() {
       date: DateTime(2026, 2, 25, 13, 0),
     ),
     DiaryEntry(
+      title: 'Dream I Cannot Forget',
+      feeling: '🤔',
+      isLocked: true,
+      description: 'Had the most vivid dream last night. It felt so real that I woke up confused. I dreamt about someone I have not seen in years. What does it mean?',
+      date: DateTime(2026, 2, 26, 7, 0),
+    ),
+    DiaryEntry(
       title: 'Old Photos',
       feeling: '🥺',
       description: 'Found a box of old photos from childhood. So many memories came flooding back. Time really does fly. I wish I could relive some of those moments.',
@@ -169,6 +200,25 @@ List<DiaryEntry> generateMockData() {
       feeling: '😊',
       description: 'Looking back at February — so many ups and downs, but I grew from every single moment. Grateful for the tears and the laughter. Bring on March!',
       date: DateTime(2026, 2, 28, 22, 0),
+    ),
+    DiaryEntry(
+      title: 'March Energy',
+      feeling: '🎉',
+      description: 'New month, new goals! Feeling fresh and ready to take on new challenges. Let us make March amazing.',
+      date: DateTime(2026, 3, 1, 8, 0),
+    ),
+    DiaryEntry(
+      title: 'Something I Will Never Tell',
+      feeling: '🥺',
+      isLocked: true,
+      description: 'There is something I have been carrying for months. I do not think I will ever tell anyone in person. But at least I can write it here. This diary is my safe space.',
+      date: DateTime(2026, 3, 2, 23, 0),
+    ),
+    DiaryEntry(
+      title: 'Monday Motivation',
+      feeling: '😊',
+      description: 'Started the week strong! Had a great morning routine and felt productive all day. Consistency is the key.',
+      date: DateTime(2026, 3, 3, 9, 0),
     ),
   ];
 }

@@ -14,6 +14,7 @@ class _DiaryWriteScreenState extends State<DiaryWriteScreen> {
   final _titleController = TextEditingController();
   final _descController = TextEditingController();
   String _selectedFeeling = '😊';
+  bool _isLocked = false;
 
   final List<String> _feelings = ['😊','😢','😡','😍','😴','🤔','😎','🥺','🎉','💔'];
 
@@ -35,6 +36,7 @@ class _DiaryWriteScreenState extends State<DiaryWriteScreen> {
       feeling: _selectedFeeling,
       description: _descController.text,
       date: widget.initialDate ?? DateTime.now(),
+      isLocked: _isLocked,
     );
     Navigator.pop(context, entry);
   }
@@ -79,6 +81,54 @@ class _DiaryWriteScreenState extends State<DiaryWriteScreen> {
                   const Icon(Icons.calendar_today, size: 16, color: Color(0xFF8A7E6B)),
                   const SizedBox(width: 6),
                   Text(_formatDate(displayDate), style: const TextStyle(color: Color(0xFF8A7E6B), fontWeight: FontWeight.w600)),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // 🔐 Lock toggle
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              decoration: BoxDecoration(
+                color: _isLocked ? const Color(0xFF3E4F5B).withOpacity(0.08) : Colors.white,
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(
+                  color: _isLocked ? const Color(0xFF3E4F5B) : const Color(0xFFEDE8DF),
+                ),
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    _isLocked ? Icons.lock : Icons.lock_open,
+                    size: 20,
+                    color: _isLocked ? const Color(0xFF3E4F5B) : const Color(0xFF9E9689),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Super Secret',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: _isLocked ? const Color(0xFF3E4F5B) : const Color(0xFF2C3A44),
+                          ),
+                        ),
+                        Text(
+                          _isLocked ? 'Biometric required to read' : 'Anyone can read this entry',
+                          style: const TextStyle(fontSize: 11, color: Color(0xFF9E9689)),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Switch(
+                    value: _isLocked,
+                    onChanged: (val) => setState(() => _isLocked = val),
+                    activeColor: const Color(0xFF3E4F5B),
+                    activeTrackColor: const Color(0xFF3E4F5B).withOpacity(0.3),
+                  ),
                 ],
               ),
             ),

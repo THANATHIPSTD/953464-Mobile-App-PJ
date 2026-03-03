@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:local_auth/local_auth.dart';
 import '../models/diary_entry.dart';
 import '../data/mock_data.dart';
 import 'diary_list_screen.dart';
@@ -15,6 +16,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   late final List<DiaryEntry> _entries;
+  final LocalAuthentication _auth = LocalAuthentication();
 
   @override
   void initState() {
@@ -38,8 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final pages = [
-      DiaryListScreen(entries: _entries, onAddEntry: _addEntry),
-      CalendarScreen(entries: _entries, onAddEntry: _addEntry),
+      DiaryListScreen(entries: _entries, onAddEntry: _addEntry, auth: _auth),
+      CalendarScreen(entries: _entries, onAddEntry: _addEntry, auth: _auth),
     ];
 
     return Scaffold(
@@ -64,14 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
         unselectedItemColor: const Color(0xFF9E9689),
         backgroundColor: Colors.white,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book_rounded),
-            label: 'Diary',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month_rounded),
-            label: 'Calendar',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.book_rounded), label: 'Diary'),
+          BottomNavigationBarItem(icon: Icon(Icons.calendar_month_rounded), label: 'Calendar'),
         ],
       ),
     );
