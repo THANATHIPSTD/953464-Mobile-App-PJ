@@ -1,0 +1,174 @@
+import '../models/diary_entry.dart';
+
+List<DiaryEntry> generateMockData() {
+  return [
+    DiaryEntry(
+      title: 'A Fresh Start',
+      feeling: '🎉',
+      description: 'February has begun and I feel so motivated! Made a new plan for the month. I want to read more books, exercise regularly, and learn something new every day.',
+      date: DateTime(2026, 2, 1, 9, 30),
+    ),
+    DiaryEntry(
+      title: 'Rainy Morning Thoughts',
+      feeling: '🤔',
+      description: 'Woke up to the sound of rain. Spent the morning journaling and drinking hot cocoa. Sometimes the quiet moments are the most meaningful ones.',
+      date: DateTime(2026, 2, 2, 8, 0),
+    ),
+    DiaryEntry(
+      title: 'Coffee Date with Best Friend',
+      feeling: '😊',
+      description: 'Met up with Ploy at our favorite café. We talked for hours about life, dreams, and everything in between. Feeling so grateful for genuine friendships.',
+      date: DateTime(2026, 2, 3, 14, 0),
+    ),
+    DiaryEntry(
+      title: 'Tough Day at Work',
+      feeling: '😢',
+      description: 'The project deadline got moved up by a week. Stayed late trying to finish everything. Feeling overwhelmed but I know I can get through this.',
+      date: DateTime(2026, 2, 4, 21, 0),
+    ),
+    DiaryEntry(
+      title: 'Sunset at the Park',
+      feeling: '😍',
+      description: 'Took a walk after work and caught the most beautiful sunset. The sky was painted in shades of orange and pink. Nature really knows how to heal the soul.',
+      date: DateTime(2026, 2, 5, 18, 30),
+    ),
+    DiaryEntry(
+      title: 'Lazy Weekend',
+      feeling: '😴',
+      description: 'Slept in until noon and binge-watched a new series. Sometimes you just need a day to do absolutely nothing and recharge.',
+      date: DateTime(2026, 2, 7, 12, 0),
+    ),
+    DiaryEntry(
+      title: 'Cooking Adventure',
+      feeling: '😎',
+      description: 'Tried making pasta from scratch for the first time! It turned out surprisingly good. The kitchen was a mess but totally worth it.',
+      date: DateTime(2026, 2, 8, 19, 0),
+    ),
+    DiaryEntry(
+      title: 'Missing Home',
+      feeling: '🥺',
+      description: 'Video called my parents tonight. Mom showed me the garden she planted. I miss being home so much. Planning to visit next month.',
+      date: DateTime(2026, 2, 9, 20, 30),
+    ),
+    DiaryEntry(
+      title: 'New Playlist',
+      feeling: '😊',
+      description: 'Spent the whole evening curating a new playlist. Music really has a way of capturing emotions that words cannot express.',
+      date: DateTime(2026, 2, 10, 21, 0),
+    ),
+    DiaryEntry(
+      title: 'Gym Progress',
+      feeling: '😎',
+      description: 'Hit a new personal record at the gym today! All the consistency is finally paying off. Feeling strong and proud of myself.',
+      date: DateTime(2026, 2, 11, 18, 0),
+    ),
+    DiaryEntry(
+      title: 'Unexpected Kindness',
+      feeling: '😍',
+      description: 'A stranger held the door for me and smiled. Such a small gesture but it made my entire day. I want to pass that kindness forward.',
+      date: DateTime(2026, 2, 12, 12, 0),
+    ),
+    DiaryEntry(
+      title: 'Late Night Study',
+      feeling: '🤔',
+      description: 'Stayed up late studying for the exam. The material is tough but I am starting to understand it better. Coffee is my best friend right now.',
+      date: DateTime(2026, 2, 13, 23, 30),
+    ),
+    DiaryEntry(
+      title: 'Valentine Self-Love Day',
+      feeling: '😍',
+      description: 'Treated myself to flowers, chocolate, and a spa session. You do not need anyone else to celebrate love. Self-love is the best love!',
+      date: DateTime(2026, 2, 14, 10, 0),
+    ),
+    DiaryEntry(
+      title: 'Movie Night',
+      feeling: '🎉',
+      description: 'Watched a heartwarming movie with friends. We laughed, cried, and ate way too much popcorn. These are the moments I want to remember forever.',
+      date: DateTime(2026, 2, 14, 21, 0),
+    ),
+    DiaryEntry(
+      title: 'Morning Run Success',
+      feeling: '😊',
+      description: 'Woke up at 6 AM and ran 5 km! My personal best this month. The endorphins are real. Feeling energized and ready to conquer the day.',
+      date: DateTime(2026, 2, 15, 7, 0),
+    ),
+    DiaryEntry(
+      title: 'A Frustrating Bug',
+      feeling: '😡',
+      description: 'Spent 4 hours debugging a single issue in my code. Turned out it was a missing semicolon. Programming can be so humbling sometimes.',
+      date: DateTime(2026, 2, 16, 16, 0),
+    ),
+    DiaryEntry(
+      title: 'Bookstore Discovery',
+      feeling: '🤔',
+      description: 'Found a hidden bookstore in the old town. Picked up three novels and a poetry collection. There is something magical about the smell of old books.',
+      date: DateTime(2026, 2, 17, 15, 0),
+    ),
+    DiaryEntry(
+      title: 'Heartbreak',
+      feeling: '💔',
+      description: 'Sometimes things do not work out the way you hope. Had a difficult conversation today. It hurts now, but I know time will heal.',
+      date: DateTime(2026, 2, 18, 22, 0),
+    ),
+    DiaryEntry(
+      title: 'Healing Day',
+      feeling: '🥺',
+      description: 'Took the day off to just breathe. Went for a slow walk, sat by the river, and let my thoughts flow. Healing is not linear but I am trying.',
+      date: DateTime(2026, 2, 19, 14, 0),
+    ),
+    DiaryEntry(
+      title: 'Beach Day Trip',
+      feeling: '🎉',
+      description: 'Spontaneous trip to the beach with the squad! Built sandcastles, swam in the ocean, and watched the waves. The sea breeze washed away all my worries.',
+      date: DateTime(2026, 2, 20, 11, 0),
+    ),
+    DiaryEntry(
+      title: 'Learning Guitar',
+      feeling: '😊',
+      description: 'Day 3 of learning guitar. My fingers hurt like crazy but I can finally play a simple chord. Progress is progress, no matter how small.',
+      date: DateTime(2026, 2, 21, 19, 30),
+    ),
+    DiaryEntry(
+      title: 'Deep Conversation',
+      feeling: '🤔',
+      description: 'Had a long talk with a mentor about career direction. Lots to think about. Sometimes the right question is more valuable than any answer.',
+      date: DateTime(2026, 2, 22, 17, 0),
+    ),
+    DiaryEntry(
+      title: 'Baking Disaster',
+      feeling: '😡',
+      description: 'Tried to bake a cake and it collapsed completely. The kitchen looked like a war zone. But you know what? I laughed it off.',
+      date: DateTime(2026, 2, 23, 14, 0),
+    ),
+    DiaryEntry(
+      title: 'Stargazing Night',
+      feeling: '😍',
+      description: 'Drove out of the city to see the stars. The sky was absolutely breathtaking. Feeling so small yet so connected to the universe.',
+      date: DateTime(2026, 2, 24, 23, 0),
+    ),
+    DiaryEntry(
+      title: 'Productive Wednesday',
+      feeling: '😎',
+      description: 'Finished all my tasks before lunch! Used the rest of the day to work on personal projects. This is what a good day feels like.',
+      date: DateTime(2026, 2, 25, 13, 0),
+    ),
+    DiaryEntry(
+      title: 'Old Photos',
+      feeling: '🥺',
+      description: 'Found a box of old photos from childhood. So many memories came flooding back. Time really does fly. I wish I could relive some of those moments.',
+      date: DateTime(2026, 2, 26, 20, 0),
+    ),
+    DiaryEntry(
+      title: 'Karaoke Night',
+      feeling: '🎉',
+      description: 'Went out for karaoke with coworkers. I cannot sing at all but that did not stop me. Laughter really is the best medicine.',
+      date: DateTime(2026, 2, 27, 22, 0),
+    ),
+    DiaryEntry(
+      title: 'End of Month Reflection',
+      feeling: '😊',
+      description: 'Looking back at February — so many ups and downs, but I grew from every single moment. Grateful for the tears and the laughter. Bring on March!',
+      date: DateTime(2026, 2, 28, 22, 0),
+    ),
+  ];
+}

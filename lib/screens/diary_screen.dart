@@ -38,7 +38,7 @@ class _DiaryScreenState extends State<DiaryScreen> {
                   child: TextField(
                     controller: _controller,
                     decoration: const InputDecoration(
-                      hintText: 'วันนี้รู้สึกยังไงบ้าง ระบายมาได้เลย...',
+                      hintText: 'How are you feeling today? Share your thoughts...',
                       border: OutlineInputBorder(),
                       fillColor: Colors.white,
                       filled: true,
@@ -53,7 +53,7 @@ class _DiaryScreenState extends State<DiaryScreen> {
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 20),
                   ),
-                  child: const Text('บันทึก'),
+                  child: const Text('Save'),
                 ),
               ],
             ),
