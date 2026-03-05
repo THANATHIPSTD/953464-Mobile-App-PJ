@@ -18,36 +18,53 @@ class DiaryListScreen extends StatelessWidget {
   });
 
   String _formatDate(DateTime date) {
-    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const months = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
     return '${months[date.month - 1]} ${date.day}';
   }
 
   String _monthYearKey(DateTime date) {
     const months = [
-      'January','February','March','April','May','June',
-      'July','August','September','October','November','December'
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
     ];
     return '${months[date.month - 1]} ${date.year}';
   }
 
-  Future<void> _openEntry(BuildContext context, DiaryEntry entry) async {
-    if (entry.isLocked) {
-      try {
-        bool didAuth = await auth.authenticate(
-          localizedReason: 'Authenticate to read this secret entry',
-          biometricOnly: true,
-        );
-        if (!didAuth) return;
-      } catch (e) {
-        print("Auth error: $e");
-        return;
-      }
-    }
+  //hint//
+  // logic same as login_screen.dart //
+  // the mock data have boolean variable name "isLocked" use this one to check have to authen or not //
 
+  Future<void> _openEntry(BuildContext context, DiaryEntry entry) async {
     if (context.mounted) {
-      Navigator.push(context, MaterialPageRoute(
-        builder: (context) => DiaryDetailScreen(entry: entry),
-      ));
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => DiaryDetailScreen(entry: entry),
+        ),
+      );
     }
   }
 
@@ -60,11 +77,21 @@ class DiaryListScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.menu_book_rounded, size: 80, color: const Color(0xFF8A7E6B).withOpacity(0.5)),
+              Icon(
+                Icons.menu_book_rounded,
+                size: 80,
+                color: const Color(0xFF8A7E6B).withOpacity(0.5),
+              ),
               const SizedBox(height: 16),
-              const Text('No diary entries yet...', style: TextStyle(fontSize: 18, color: Color(0xFF7A7267))),
+              const Text(
+                'No diary entries yet...',
+                style: TextStyle(fontSize: 18, color: Color(0xFF7A7267)),
+              ),
               const SizedBox(height: 8),
-              const Text('Tap + to start writing!', style: TextStyle(fontSize: 14, color: Color(0xFF9E9689))),
+              const Text(
+                'Tap + to start writing!',
+                style: TextStyle(fontSize: 14, color: Color(0xFF9E9689)),
+              ),
             ],
           ),
         ),
@@ -101,14 +128,21 @@ class DiaryListScreen extends StatelessWidget {
               // Month header tab
               if (monthIndex > 0) const SizedBox(height: 8),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 14,
+                  vertical: 8,
+                ),
                 decoration: BoxDecoration(
                   color: const Color(0xFF3E4F5B),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
                   monthKey,
-                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 13,
+                  ),
                 ),
               ),
               const SizedBox(height: 12),
@@ -146,7 +180,12 @@ class DiaryListScreen extends StatelessWidget {
                       : const Color(0xFFEDE8DF),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Center(child: Text(entry.feeling, style: const TextStyle(fontSize: 24))),
+                child: Center(
+                  child: Text(
+                    entry.feeling,
+                    style: const TextStyle(fontSize: 24),
+                  ),
+                ),
               ),
               const SizedBox(width: 12),
 
@@ -160,14 +199,21 @@ class DiaryListScreen extends StatelessWidget {
                         Expanded(
                           child: Text(
                             entry.title,
-                            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF2C3A44)),
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF2C3A44),
+                            ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
                         if (entry.isLocked)
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 6,
+                              vertical: 2,
+                            ),
                             decoration: BoxDecoration(
                               color: const Color(0xFF3E4F5B).withOpacity(0.1),
                               borderRadius: BorderRadius.circular(8),
@@ -175,9 +221,20 @@ class DiaryListScreen extends StatelessWidget {
                             child: const Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Icon(Icons.lock, size: 12, color: Color(0xFF3E4F5B)),
+                                Icon(
+                                  Icons.lock,
+                                  size: 12,
+                                  color: Color(0xFF3E4F5B),
+                                ),
                                 SizedBox(width: 2),
-                                Text('Secret', style: TextStyle(fontSize: 10, color: Color(0xFF3E4F5B), fontWeight: FontWeight.w600)),
+                                Text(
+                                  'Secret',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    color: Color(0xFF3E4F5B),
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -190,10 +247,16 @@ class DiaryListScreen extends StatelessWidget {
                         ? ClipRRect(
                             borderRadius: BorderRadius.circular(4),
                             child: ImageFiltered(
-                              imageFilter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
+                              imageFilter: ImageFilter.blur(
+                                sigmaX: 6,
+                                sigmaY: 6,
+                              ),
                               child: Text(
                                 entry.description,
-                                style: const TextStyle(fontSize: 13, color: Color(0xFF7A7267)),
+                                style: const TextStyle(
+                                  fontSize: 13,
+                                  color: Color(0xFF7A7267),
+                                ),
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -201,7 +264,10 @@ class DiaryListScreen extends StatelessWidget {
                           )
                         : Text(
                             entry.description,
-                            style: const TextStyle(fontSize: 13, color: Color(0xFF7A7267)),
+                            style: const TextStyle(
+                              fontSize: 13,
+                              color: Color(0xFF7A7267),
+                            ),
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),
@@ -211,7 +277,10 @@ class DiaryListScreen extends StatelessWidget {
               const SizedBox(width: 8),
 
               // Date
-              Text(_formatDate(entry.date), style: const TextStyle(fontSize: 11, color: Color(0xFF9E9689))),
+              Text(
+                _formatDate(entry.date),
+                style: const TextStyle(fontSize: 11, color: Color(0xFF9E9689)),
+              ),
             ],
           ),
         ),
